@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>221580579326-ku6n3154uel240m8o6sugqedp1od8h3o.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.221580579326-ku6n3154uel240m8o6sugqedp1od8h3o</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCaJhlFVlHmdJWSI8SoezPQ70WTlEsz42A</string>
+	<key>GCM_SENDER_ID</key>
+	<string>221580579326</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>RealTalk.RealTalk</string>
+	<key>PROJECT_ID</key>
+	<string>realtalk-69f65</string>
+	<key>STORAGE_BUCKET</key>
+	<string>realtalk-69f65.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:221580579326:ios:b828a2db98ea33c5a9b0af</string>
+	<key>DATABASE_URL</key>
+	<string>https://realtalk-69f65.firebaseio.com</string>
+</dict>
+</plist>
