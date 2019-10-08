@@ -11,6 +11,9 @@
 		8DA5693169DD01ABE15F200C /* Pods_RealTalkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6F00528A369371E1F21B2E0 /* Pods_RealTalkTests.framework */; };
 		F302A28F233BE1C400E4F7F3 /* grass.png in Resources */ = {isa = PBXBuildFile; fileRef = F302A28E233BE1C300E4F7F3 /* grass.png */; };
 		F302A291233C14E700E4F7F3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F302A290233C14E700E4F7F3 /* User.swift */; };
+		F3467E22234A9CF1001C9D5C /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3467E21234A9CF1001C9D5C /* ChatVC.swift */; };
+		F3467E24234ACF26001C9D5C /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3467E23234ACF26001C9D5C /* Message.swift */; };
+		F3467E26234BA573001C9D5C /* Sender.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3467E25234BA573001C9D5C /* Sender.swift */; };
 		F346CC00233AB3D0008B860C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F346CBFF233AB3D0008B860C /* AppDelegate.swift */; };
 		F346CC02233AB3D0008B860C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F346CC01233AB3D0008B860C /* ViewController.swift */; };
 		F346CC05233AB3D0008B860C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F346CC03233AB3D0008B860C /* Main.storyboard */; };
@@ -56,6 +59,9 @@
 		EB60D4F91AA2C36C18C1F2B2 /* Pods-RealTalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealTalk.release.xcconfig"; path = "Target Support Files/Pods-RealTalk/Pods-RealTalk.release.xcconfig"; sourceTree = "<group>"; };
 		F302A28E233BE1C300E4F7F3 /* grass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grass.png; sourceTree = "<group>"; };
 		F302A290233C14E700E4F7F3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F3467E21234A9CF1001C9D5C /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
+		F3467E23234ACF26001C9D5C /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		F3467E25234BA573001C9D5C /* Sender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sender.swift; sourceTree = "<group>"; };
 		F346CBFC233AB3D0008B860C /* RealTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F346CBFF233AB3D0008B860C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F346CC01233AB3D0008B860C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -173,6 +179,9 @@
 				F346CC37233ABC84008B860C /* HomeVC.swift */,
 				F3EC827F233B0A4E00041B6A /* FeelingTableViewCell.swift */,
 				F302A290233C14E700E4F7F3 /* User.swift */,
+				F3467E21234A9CF1001C9D5C /* ChatVC.swift */,
+				F3467E23234ACF26001C9D5C /* Message.swift */,
+				F3467E25234BA573001C9D5C /* Sender.swift */,
 			);
 			path = RealTalk;
 			sourceTree = "<group>";
@@ -454,14 +463,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3467E26234BA573001C9D5C /* Sender.swift in Sources */,
 				F346CC02233AB3D0008B860C /* ViewController.swift in Sources */,
 				F346CC38233ABC84008B860C /* HomeVC.swift in Sources */,
 				F346CC00233AB3D0008B860C /* AppDelegate.swift in Sources */,
 				F346CC36233ABC76008B860C /* SuccessVC.swift in Sources */,
 				F3EC8280233B0A4E00041B6A /* FeelingTableViewCell.swift in Sources */,
 				F346CC34233ABC66008B860C /* LoginVC.swift in Sources */,
+				F3467E22234A9CF1001C9D5C /* ChatVC.swift in Sources */,
 				F346CC30233ABC45008B860C /* SignUpLoginVC.swift in Sources */,
 				F346CC32233ABC59008B860C /* SignUpVC.swift in Sources */,
+				F3467E24234ACF26001C9D5C /* Message.swift in Sources */,
 				F302A291233C14E700E4F7F3 /* User.swift in Sources */,
 				F346CC2E233ABC1C008B860C /* OpeningVC.swift in Sources */,
 			);

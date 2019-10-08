@@ -38,7 +38,7 @@ class SignUpVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         if(usernameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||  emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||  passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""){
             error += "All Fields Must Be Filled In"
         }
-        if (feelings.count == 0){
+        if (selectedTraits.count == 0){
             error += "; Please Select One or More Symptoms"
         }
         email = emailTextField.text!
@@ -48,32 +48,37 @@ class SignUpVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 print("Error getting documents: \(err)")
             } else {
                 for i in querySnapshot!.documents {
-                    if (i.data()["username"] as! String == self.username){
+                    print ("________")
+                    print (i.data()["username"] as! String)
+                    print (self.username!)
+                    print ("---------")
+                    if ((i.data()["username"] as! String) == self.username!){
+                        print ("SAMESIES")
                         error += "Username Already Exists"
+                        print (error)
                     }
                 }
             }
-        }
-        if (error == ""){
-            Auth.auth().createUser(withEmail: email!, password: passwordTextField.text!) { authResult, error in
-                if (error != nil){
+            if (error == ""){
+                Auth.auth().createUser(withEmail: self.email!, password: self.passwordTextField.text!) { authResult, error in
+                    if (error != nil){
                     print (error as Any)
-                }
-                else {
-                    self.date = Date()
-                    print(authResult?.additionalUserInfo as Any)
-                    self.db.collection("users").document(self.email!).setData(["email":self.email!,"username": self.username!, "symptoms": self.selectedTraits, "gAssigned": "0", "gID": "", "numberOfChats": "0", "recentUpdate": self.date as Any])
-                    self.user = User(email: self.email!, username: self.username!, groupAssigned: false, groupUID: "", symptoms: self.selectedTraits, numberOfChats: 0, recentClick: self.date!)
-                    self.performSegue(withIdentifier: "SignUpToSuccess", sender: self)
+                    }
+                    else {
+                        self.date = Date()
+                        print(authResult?.additionalUserInfo as Any)
+                        self.db.collection("users").document(self.email!).setData(["email":self.email!,"username": self.username!, "symptoms": self.selectedTraits, "gAssigned": "0", "currGID": "", "numberOfChats": 0, "recentUpdate": self.date as Any])
+                        self.user = User(email: self.email!, username: self.username!, groupAssigned: false, groupUID: "", symptoms: self.selectedTraits, numberOfChats: 0, recentClick: self.date!)
+                        self.performSegue(withIdentifier: "SignUpToSuccess", sender: self)
+                    }
                 }
             }
-        }
-        else {
-            let alertController = UIAlertController(title: "Input Error", message:
+            else {
+                let alertController = UIAlertController(title: "Input Error", message:
                 error, preferredStyle: .alert)
-            alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
-            
-            self.present(alertController, animated: true, completion: nil)
+                alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+                self.present(alertController, animated: true, completion: nil)
+            }
         }
     }
     func adjust(op: String, item: String) -> Void{

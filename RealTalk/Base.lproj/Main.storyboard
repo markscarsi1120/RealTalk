@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -42,11 +40,11 @@
             <objects>
                 <viewController storyboardIdentifier="SignUpLoginVC" title="SignUpLoginVC" id="S3O-2R-d1X" customClass="SignUpLoginVC" customModule="RealTalk" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LH2-cX-XYo">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nkl-Dp-cCH">
-                                <rect key="frame" x="142" y="433.5" width="130" height="29.5"/>
+                                <rect key="frame" x="142" y="379.5" width="130" height="29.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Nkl-Dp-cCH" secondAttribute="height" multiplier="131:30" id="lcS-Z8-GG6"/>
                                 </constraints>
@@ -56,7 +54,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tmZ-gK-J8z">
-                                <rect key="frame" x="142" y="494" width="130" height="30"/>
+                                <rect key="frame" x="142" y="440" width="130" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="tmZ-gK-J8z" secondAttribute="height" multiplier="131:30" id="xK9-nk-wQE"/>
                                 </constraints>
@@ -100,39 +98,36 @@
             <objects>
                 <viewController title="SignUpVC" id="8kT-T2-TUv" customClass="SignUpVC" customModule="RealTalk" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3xd-u3-cjB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="21e-0K-Suo">
-                                <rect key="frame" x="128" y="141" width="158" height="30"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="128" y="97" width="158" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R8j-8V-Wzy">
-                                <rect key="frame" x="128" y="283" width="158" height="30"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="128" y="279" width="158" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SFs-rP-YTy">
-                                <rect key="frame" x="128" y="212" width="158" height="30"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="128" y="172" width="158" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I'm feeling..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s64-dZ-FjM">
-                                <rect key="frame" x="128" y="350" width="158" height="30"/>
+                                <rect key="frame" x="128" y="350" width="158" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="q9K-Av-CKB">
-                                <rect key="frame" x="20" y="427" width="374" height="349"/>
+                                <rect key="frame" x="20" y="431" width="374" height="291"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="feelingCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="feelingCell" id="IPr-rI-bk8" customClass="FeelingTableViewCell" customModule="RealTalk" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="374" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IPr-rI-bk8" id="niY-Dr-6cC">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
@@ -175,7 +170,7 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8DE-iD-6I1">
-                                <rect key="frame" x="128" y="812" width="158" height="30"/>
+                                <rect key="frame" x="128" y="758" width="158" height="30"/>
                                 <state key="normal" title="Submit"/>
                                 <connections>
                                     <action selector="submit:" destination="8kT-T2-TUv" eventType="touchUpInside" id="abD-OL-JOV"/>
@@ -234,7 +229,7 @@
             <objects>
                 <viewController title="SuccessVC" id="ejW-sm-8T8" customClass="SuccessVC" customModule="RealTalk" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fcR-mW-DUi">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="q1Y-vQ-WWQ"/>
@@ -252,28 +247,28 @@
             <objects>
                 <viewController title="HomeVC" id="7VJ-lW-uCt" customClass="HomeVC" customModule="RealTalk" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Nse-bZ-gUk">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5pT-EG-Hfl">
-                                <rect key="frame" x="152.5" y="375" width="109" height="30"/>
+                                <rect key="frame" x="152.5" y="331" width="109" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="5Q4-rm-V5v"/>
                                     <constraint firstAttribute="width" constant="109" id="cox-hW-gSu"/>
                                 </constraints>
                                 <state key="normal" title="My Chats"/>
                                 <connections>
-                                    <action selector="seeChats:" destination="7VJ-lW-uCt" eventType="touchUpInside" id="heC-i4-jfi"/>
+                                    <action selector="seeChats:" destination="7VJ-lW-uCt" eventType="touchUpInside" id="qXY-bQ-Wng"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="55n-RS-OyN">
-                                <rect key="frame" x="152.5" y="433" width="109" height="30"/>
+                                <rect key="frame" x="152.5" y="389" width="109" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="109" id="8vd-k0-nDZ"/>
                                     <constraint firstAttribute="height" constant="30" id="dTj-SN-uag"/>
                                 </constraints>
                                 <connections>
-                                    <action selector="joinleaveGroup:" destination="7VJ-lW-uCt" eventType="touchUpInside" id="Vf8-qM-uiP"/>
+                                    <action selector="joinleaveGroup:" destination="7VJ-lW-uCt" eventType="touchUpInside" id="uc2-Xk-noN"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -287,20 +282,43 @@
                         <viewLayoutGuide key="safeArea" id="bVN-3Q-pV4"/>
                     </view>
                     <connections>
-                        <outlet property="groupButton" destination="55n-RS-OyN" id="kxo-IA-xJm"/>
-                        <outlet property="seeChatsButton" destination="Nse-bZ-gUk" id="6Fm-5t-hEP"/>
+                        <outlet property="groupButton" destination="55n-RS-OyN" id="NBW-C3-eLM"/>
+                        <outlet property="seeChatsButton" destination="5pT-EG-Hfl" id="jNG-iq-ySi"/>
+                        <segue destination="1RS-9Y-XAl" kind="presentation" identifier="HomeToChat" id="0sA-r0-N18"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZJr-e5-UAG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4200" y="150.66964285714286"/>
         </scene>
+        <!--ChatVC-->
+        <scene sceneID="26c-kK-NLH">
+            <objects>
+                <viewController title="ChatVC" id="1RS-9Y-XAl" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bEF-tr-kTh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZXR-7H-qi7">
+                                <rect key="frame" x="20" y="107" width="374" height="642"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="RJA-KK-K3U"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SBF-6d-8lD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5192.753623188406" y="150.66964285714286"/>
+        </scene>
         <!--LoginVC-->
         <scene sceneID="Ryx-MG-4jC">
             <objects>
                 <viewController storyboardIdentifier="LoginVC" title="LoginVC" id="e3f-Ry-YiZ" customClass="LoginVC" customModule="RealTalk" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RUh-Zf-3nK">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YcU-Kp-VAx">
@@ -314,14 +332,12 @@
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1xH-yt-TFd">
                                 <rect key="frame" x="129" y="337" width="156" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email or Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t0k-vP-MLV">
                                 <rect key="frame" x="129" y="242" width="156" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>

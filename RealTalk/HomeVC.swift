@@ -15,7 +15,8 @@ class HomeVC: UIViewController {
     var user: User?
     var db = Firestore.firestore()
     var groups: [String: Double] = [:]
-    @IBOutlet var seeChatsButton: UIView!
+    @IBOutlet weak var seeChatsButton: UIButton!
+    
     @IBOutlet weak var groupButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,7 +64,7 @@ class HomeVC: UIViewController {
     
     @IBAction func seeChats(_ sender: Any) {
         if (user!.numberOfChats > 0){
-            self.performSegue(withIdentifier: "", sender: self)
+            self.performSegue(withIdentifier: "HomeToChat", sender: self)
         }
     }
     @IBAction func joinleaveGroup(_ sender: Any) {
@@ -71,6 +72,7 @@ class HomeVC: UIViewController {
             //alert goes here that are you sure?
             db.collection("groups").document(user!.groupUID).updateData(["names": FieldValue.arrayRemove([user?.username]), "members":  FieldValue.increment(Int64(-1))])
             groupButton.setTitle("Join New Group", for: .normal)
+            db.collection("users").document(user!.email).updateData(["currGID": ""])
         }
         else {
             var smallestScore: Double = -1.0
@@ -98,6 +100,7 @@ class HomeVC: UIViewController {
                 }
                 self.user?.groupUID = smallestUID
                 db.collection("groups").document(smallestUID).updateData(["names": FieldValue.arrayUnion([user?.username]), "members":  FieldValue.increment(Int64(1))])
+                db.collection("users").document(user!.email).updateData(["currGID": smallestUID, "numberOfChats": FieldValue.increment(Int64(1))])
             }
             else{
                 var nameArr: [String] = []
@@ -113,6 +116,25 @@ class HomeVC: UIViewController {
                 print (newCityRef.documentID)
                 self.user?.groupUID = newCityRef.documentID
             }
+        }
+        let docRefUser = db.collection("users").document(user!.email)
+
+        docRefUser.getDocument { (document, error) in
+            if let document = document, document.exists {
+                let dataDescription = document.data()!["numberOfChats"] as! Int
+                if (dataDescription > 0){
+                    self.seeChatsButton.alpha = 1.0
+                    print ("seeCHATSBUTTON ALPHA SHOULD BE FUCKING 1")
+                }
+            } else {
+                print("Document does not exist")
+            }
+        }
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "HomeToChat"){
+            let displayVC = segue.destination as! ChatVC
+            displayVC.user = self.user!
         }
     }
 }
